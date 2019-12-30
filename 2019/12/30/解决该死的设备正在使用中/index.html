@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>解决该死的&quot;设备正在使用中&quot; | HelloWorld的小博客</title><meta name="description" content="解决该死的&quot;设备正在使用中&quot;"><meta name="keywords" content="小技巧"><meta name="author" content="HelloWorld"><meta name="copyright" content="HelloWorld"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://s2.ax1x.com/2019/10/20/KM0NNQ.jpg"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="解决该死的&quot;设备正在使用中&quot;"><meta name="twitter:description" content="解决该死的&quot;设备正在使用中&quot;"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153401.png"><meta property="og:type" content="article"><meta property="og:title" content="解决该死的&quot;设备正在使用中&quot;"><meta property="og:url" content="http://yoursite.com/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/"><meta property="og:site_name" content="HelloWorld的小博客"><meta property="og:description" content="解决该死的&quot;设备正在使用中&quot;"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153401.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/"><link rel="next" title="绕过静态博客的文章密码验证" href="http://yoursite.com/2019/12/26/%E7%BB%95%E8%BF%87%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%87%E7%AB%A0%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">HelloWorld的小博客</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191225162726.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#方法一"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">方法一</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#方法二"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">方法二</span></a></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153401.png)"><div id="post-info"><div id="post-title"><div class="posttitle">解决该死的&quot;设备正在使用中&quot;</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2019-12-30<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2019-12-30</time><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon fa-fw" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">432</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon fa-fw" aria-hidden="true"></i><span>阅读时长: 1 分钟</span><div class="post-meta-pv-cv"><span class="post-meta__separator">|</span><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="fa fa-comments-o post-meta__icon fa-fw" aria-hidden="true"></i><span>评论数:</span><a href="/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><html><head></head><body><p>相信大家在使用u盘时都会遇到这样的问题：在弹出u盘时通常会显示下面的提示框</p>
+<p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153401.png" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153401.png" class="lazyload"></a></p>
+<p>一般来说出现这个问题一般是因为u盘上的文件还处于打开状态，必须关闭文件才可以拔出</p>
+<p><strong>然而</strong> 很多时候我们明明关闭了各种可能占用文件的程序，但是还是无法弹出u盘</p>
+<p>为了解决这个问题，我们要想办法找出是什么软件打开了u盘上的文件</p>
+<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p>直接拔出u盘（手动滑稽）</p>
+<p>不可否认这当然是最快的方法，但是如果u盘正在读写文件直接拔下u盘可能会导致文件损坏</p>
+<p>虽然如此，我也没见过使用此方法导致文件损坏的案例</p>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>使用<code>Windows资源监视器</code>来查找是什么应用占用了文件</p>
+<p>首先打开<code>Windows任务管理器</code>，在性能选项卡找到以下按钮</p>
+<p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153956.png" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230153956.png" class="lazyload"></a></p>
+<p>点击打开Windows资源监视器，在cpu一栏找到<code>关联的句柄</code></p>
+<p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230154111.png" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191230154111.png" class="lazyload"></a></p>
+<p>在搜索句柄框内输入<code>盘符:\</code>来搜索是什么程序正在打开u盘上的文件</p>
+<p>例如你的u盘插入到电脑显示为D盘，则你应该输入<code>D:\</code>，按下回车键开始搜索</p>
+<p>在搜索结果中可能会出现一些<code>explorer.exe</code>和<code>svchost.exe</code>，这些都是系统应用，不必理会</p>
+<p>除此之外，你应该关心的是其他的应用，你可以手动关闭那些应用，也可以通过右键直接结束它</p>
+<p>在结束之后再使用弹出u盘，u盘应该能够正常弹出了</p>
+</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">HelloWorld</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/">http://yoursite.com/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">HelloWorld的小博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧    </a></div><div class="post_share"></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2019/12/26/%E7%BB%95%E8%BF%87%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%87%E7%AB%A0%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20191226151625.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>绕过静态博客的文章密码验证</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+          clientID: 'a7f89493fe9d480aaff3',
+          clientSecret: 'da80ecf2ad0dff7a81bad3222eedd98cba397719',
+          repo: 'mzdluo123.github.io',
+          owner: 'mzdluo123',
+          admin: 'mzdluo123',
+          id: md5(decodeURI(location.pathname)),
+          language: 'zh-CN',
+          updateCountCallback: commentCount
+        })
+        gitalk.render('gitalk-container')
+
+function commentCount(n){
+  document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+}</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 By HelloWorld</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
