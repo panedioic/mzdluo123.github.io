@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>改善idea的代码显示效果</title>
+      <link href="/2020/01/14/%E6%94%B9%E5%96%84idea%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C/"/>
+      <url>/2020/01/14/%E6%94%B9%E5%96%84idea%E7%9A%84%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从idea2019.2版本开始，自带的中文显示就变得很奇怪<br><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224018.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224018.png" class="lazyload"></a></p><p>这样的显示效果看上去比较难受，是由于当前字体无法正确显示中文，可以考虑修改字体</p><p><strong>以下是一些代码字体推荐</strong></p><p><a href="https://zhuanlan.zhihu.com/p/36918101" target="_blank" rel="noopener">知乎链接</a></p><h1 id="更改字体"><a href="#更改字体" class="headerlink" title="更改字体"></a>更改字体</h1><p>在设置中找到font，如图</p><p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224303.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224303.png" class="lazyload"></a></p><p>其中每一项的作用如图所示</p><p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224536.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224536.png" class="lazyload"></a></p><p>图上也有本人的配置</p><p>效果如下</p><p><a href="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224641.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://cdn.jsdelivr.net/gh/mzdluo123/blog_imgs/img/20200114224641.png" class="lazyload"></a></p></body></html>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 小技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决该死的&quot;设备正在使用中&quot;</title>
       <link href="/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/"/>
       <url>/2019/12/30/%E8%A7%A3%E5%86%B3%E8%AF%A5%E6%AD%BB%E7%9A%84%E8%AE%BE%E5%A4%87%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8%E4%B8%AD/</url>
